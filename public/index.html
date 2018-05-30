@@ -19,9 +19,10 @@
     <div class="questions">
       <div class="question">
         <p>Please enter your boat length:</p>
-        <input class="boatLengthNumber" type="number" required id="boatLengthNumber" onchange="updateBoatLength(event)">
-        <input class="boatLengthType" type="radio" id="ft" value="ft" checked onchange="boatLengthTypeChanged(event)"><label for="ft" >Feet</label>
-        <input class="boatLengthType" type="radio" id="meter" value="meter" onchange="boatLengthTypeChanged(event)"><label for="meter">Meter</label>
+        <input class="boatLengthNumber" type="number" required id="boatLengthNumber">
+        <input class="boatLengthType" type="radio" id="ft" value="ft" checked ><label for="ft" >Feet</label>
+        <input class="boatLengthType" type="radio" id="meter" value="meter" ><label for="meter">Meter</label>
+        <span class="boatLengthNumberError error"><p>Boat size not suported</p></span>
       </div>
       
       <div class="sailingStyle question">
@@ -35,10 +36,13 @@
           <input list="lineType" class="lineTypeList">
           <datalist id="lineType"></datalist>
         </div>
-        <div class="recomwndation">
+        <div class="recomndation">
           <p>Our recommendation: </p>
-          <div class="recommendationStering"/>
-
+          
+        <input class="recomendationType" type="radio" id="ftRecomenation" value="ft" checked ><label for="ft" >Feet</label>
+        <input class="recomendationType" type="radio" id="meterRecomendation" value="meter" ><label for="meter">Meter</label>
+          <div class="recommendationString" id="ftrecommendationString"></div>
+          <div class="recommendationString" id="mmrecommendationString"></div>
         </div>
     </div>
     <script src="./app.js">
